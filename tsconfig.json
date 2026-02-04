@@ -1,0 +1,23 @@
+// tsconfig.json (root)
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/app/*"],
+      "@features/*": ["./src/app/features/*"],
+      "@hooks/*": ["./src/app/hooks/*"],
+      "@utils/*": ["./src/app/utils/*"],
+      "@types/*": ["./src/app/types/*"]
+    },
+    "types": ["node", "vite/client"],
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src", "vite.config.ts"]
+}
