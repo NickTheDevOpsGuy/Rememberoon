@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.counter-bump {
+  display: inline-block; /* transform-friendly */
+  animation: bump 180ms ease; /* will play on mount/remount */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .counter-bump {
+    animation: none;
+  }
+}
